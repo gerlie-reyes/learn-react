@@ -1,9 +1,5 @@
-import TodoContext from "./TodoContext";
-import { useContext } from "react";
-
-const Todos = () => {
-  const { todos, addTodo } = useContext(TodoContext);
-
+const Todos = ({ todos, addTodo }) => {
+  console.log("child render");
   return (
     <>
       <h2>My Todos</h2>

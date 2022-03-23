@@ -1,12 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import Todos from "./Todos";
-import { TodoProvider } from "./TodoContext";
 
 const App = () => {
+  const [count, setCount] = useState(0);
+  const [todos, setTodos] = useState([]);
+
+  const increment = () => {
+    setCount((c) => c + 1);
+  };
+
+  const addTodo = () => {
+    setTodos((prevTodos) => [...prevTodos, "New Todo"]);
+  };
+
   return (
-    <TodoProvider>
-      <Todos />
-    </TodoProvider>
+    <>
+      <Todos todos={todos} addTodo={addTodo} />
+      <hr />
+      <div>
+        Count: {count}
+        <button onClick={increment}>+</button>
+      </div>
+    </>
   );
 }
 
