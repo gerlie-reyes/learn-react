@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import Todos from "./Todos";
+import React, { useState } from 'react';
+import Todos from './Todos';
 
 const App = () => {
   const [count, setCount] = useState(0);
@@ -10,7 +10,7 @@ const App = () => {
   };
 
   const addTodo = () => {
-    setTodos((prevTodos) => [...prevTodos, "New Todo"]);
+    setTodos((prevTodos) => [...prevTodos, 'New Todo']);
   };
 
   return (
@@ -23,6 +23,6 @@ const App = () => {
       </div>
     </>
   );
-}
+};
 
 export default App;
