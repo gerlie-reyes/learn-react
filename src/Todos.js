@@ -1,3 +1,5 @@
+import { memo } from "react";
+
 const Todos = ({ todos, addTodo }) => {
   console.log("child render");
   return (
@@ -11,4 +13,4 @@ const Todos = ({ todos, addTodo }) => {
   );
 };
 
-export default Todos;
+export default memo(Todos);
